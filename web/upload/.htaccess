@@ -1,0 +1,3 @@
+RewriteEngine On
+# 禁止访问脚本类后缀，直接403
+RewriteRule \.(php|php5|php7|php8|phtml|phar|inc|cgi|sh|pl|py)$ - [R=403,NC,L]

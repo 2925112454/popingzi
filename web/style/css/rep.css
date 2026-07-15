@@ -1,0 +1,81 @@
+.like-container {
+    position: fixed; /* 固定在视口右下角 */
+    bottom: 1rem;
+    right: 2rem;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index:2;
+}
+
+.like-item {
+    background-color:var(--heder-color);
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    opacity: 0;
+    transform: translate(100%, 100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    border: 1px solid var(--border-color);
+}
+
+.like-item.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.like-item.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+}
+
+.user-info {
+    flex: 1;
+    overflow: hidden;
+    text-align: left;
+}
+
+.user-name-x {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--font-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.like-text {
+    font-size: 0.75rem;
+    color: var(--hover-color);
+    display: flex;
+    align-items: center;
+}
+
+.heart-icon {
+    color:var(--home-hover-color);
+    font-size: 1.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
