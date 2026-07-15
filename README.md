@@ -67,7 +67,7 @@ $mysql_database    = 'popingzi';   // 数据库名
 ## 目录结构
 
 ```
-POPINGZI/
+web/
 ├── api/              # 接口与功能处理文件
 ├── inc/              # 公共包含文件
 │   ├── conn.php      # 数据库配置文件（需修改）
